@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom'
 import './Navbar.scss'
 
-const Navbar = (props) => {
+const Navbar = () => {
 
     return (
         <div className="Navbar">
-            <h1>1800s Clothing</h1>
-            <div onClick={() => props.setCurrentPage('books')} class="navlink">View Books</div>
-            <div onClick={() => props.setCurrentPage('costumes')} class="navlink">View Costumes</div>
+            <Link to="/" class="logo">1800s Clothing</Link>
+            <Link to="/books" class="navlink">View Books</Link>
+            <Link to="/costumes" class="navlink">View Costumes</Link>
         </div>
     )
 }
