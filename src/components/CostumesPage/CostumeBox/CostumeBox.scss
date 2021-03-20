@@ -1,0 +1,38 @@
+.CostumeBox {
+    background-color: lightgray;
+    border-radius: 10px;
+    line-height: 1.2;
+    padding: 10px;
+    width: 420px;
+
+    .costumeUpper {
+        display: flex;
+        min-height: 200px;
+
+        .costumeImage {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        .costumeCaption {
+            font-size: 18px;
+        }
+    }
+    .divider {
+        height: 1px;
+        background-color: rgb(134, 134, 134);
+        margin: 10px 0;
+    }
+    .costumeLower {
+        display: flex;
+
+        .tag {
+            text-transform: capitalize;
+            background-color: rgb(231, 231, 231);
+            padding: 8px;
+            border-radius: 15px;
+            margin-right: 10px;
+        }
+    }
+}
