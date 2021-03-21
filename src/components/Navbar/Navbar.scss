@@ -1,28 +1,32 @@
 .Navbar {
-    display: grid;
-    grid-template-columns: auto 160px 160px;
-    grid-gap: 20px;
-    align-items: center;
     background-color: rgb(164, 194, 168);
     height: 60px;
-    padding-right: 20px;
 
-    .logo {
-        font-size: 30px;
-        font-weight: bold;
-        padding-left: 10px;
-        text-decoration: none;
-        color: black;
-    }
-    .navlink {
-        background-color: rgb(72, 175, 94);
-        text-align: center;
-        padding: 10px;
-        border-radius: 20px;
-        font-weight: bold;
-        font-size: 18px;
-        cursor: pointer;
-        text-decoration: none;
-        color: black;
+    .wrapper1200 {
+        display: grid;
+        grid-template-columns: auto 160px 160px;
+        grid-gap: 20px;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            padding-left: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        .navlink {
+            background-color: rgb(72, 175, 94);
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+        }
     }
 }

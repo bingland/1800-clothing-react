@@ -10,7 +10,7 @@ const CostumesPage = () => {
     console.log(cjson[0])
 
     return (
-        <div className="CostumesPage">
+        <div className="CostumesPage wrapper1200">
             <FilterArea />
             <div className="CostumesArea">
                 {cjson.map(c => (

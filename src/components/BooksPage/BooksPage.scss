@@ -1,3 +1,39 @@
 .BooksPage {
+    display: grid;
+    grid-template-columns: 250px auto;
+    height: calc(100vh - 60px);
     
+    .bookList {
+        background-color: salmon;
+        box-sizing: border-box;
+
+
+        .title {
+            font-weight: bold;
+            font-size: 25px;
+            padding: 15px;
+            padding-left: 20px;
+            background-color: rgb(236, 89, 73);
+        }
+        .chapters {
+            .chapter {
+                padding: 15px;
+                padding-left: 20px;
+                border-top: 1px solid rgb(184, 120, 120);
+            }
+            .chapter:hover {
+                background-color: rgb(218, 109, 97);
+                cursor: pointer;
+            }
+        }
+    }
+    .bookDisplay {
+        padding: 20px;
+        height: calc(100vh - 100px);
+
+        .pdfViewer {
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
