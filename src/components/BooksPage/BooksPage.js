@@ -1,28 +1,38 @@
+import React, { useState } from 'react'
 import './BooksPage.scss'
 
 const BooksPage = () => {
+    const [selectedPDF, setSelectedPDF] = useState('1820-1829')
+    console.log(selectedPDF)
+
+    const decades = ['1800-1819', '1820-1829', '1830-1839', '1840-1849', '1850-1859', '1860-1869', '1870-1879', '1880-1889', '1890-1899']
+
+    // i have to re-render the embed tag so that the right PDF loads.
+    // maybe there's a better way to do this
+    const changePDF = (name) => {
+        setSelectedPDF(name)
+    }
 
     return (
         <div className="BooksPage wrapper1200">
             <div className="bookList">
                 <div className="title">Books</div>
                 <ul className="chapters">
-                    <li className="chapter">1800-1810</li>
-                    <li className="chapter">1810-1820</li>
-                    <li className="chapter">1820-1830</li>
-                    <li className="chapter">1830-1840</li>
-                    <li className="chapter">1840-1850</li>
-                    <li className="chapter">1850-1860</li>
-                    <li className="chapter">1860-1870</li>
-                    <li className="chapter">1870-1880</li>
-                    <li className="chapter">1880-1890</li>
-                    <li className="chapter">1890-1899</li>
+                    {decades.map((decade, index) => (
+                        <li onClick={() => changePDF(decades[index]) } key={index} className={decade === selectedPDF ? "chapter active" : "chapter"}>{decade}</li>
+                    ))}
                 </ul>
             </div>
             <div className="bookDisplay">
-                
-                <embed class="pdfViewer" src="./pdf/1820-1829.pdf" width="600" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html" />
-
+            {decades.map((decade, index) => (
+                <React.Fragment>
+                    {selectedPDF === decade && (
+                        <embed className="pdfViewer" key={index} src={`./pdf/${decade}.pdf`} width="600" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html" />
+                    )}
+                </React.Fragment>
+            ))}
+            
+            
             </div>
         </div>
     )

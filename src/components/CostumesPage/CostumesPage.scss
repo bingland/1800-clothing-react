@@ -6,8 +6,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
-        background-color: lightblue;
         grid-gap: 10px;
         padding: 10px;
+        max-height: calc(100vh - 60px);
+        overflow-y: scroll;
+        box-sizing: border-box;
     }
 }
